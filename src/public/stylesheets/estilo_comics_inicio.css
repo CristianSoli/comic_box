@@ -1,0 +1,301 @@
+:root {
+    --color-primary: #E91105;
+    --color-secundary: #3675C8;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    background-image: url(../images/banner.jpg);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.home h1 {
+    padding-top: 2rem;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    color: #fff;
+    font-size: 10rem;
+    text-align: center;
+    font-family: 'MuseoModerno', cursive;
+    text-shadow: 1px 10px #3675C8;
+}
+
+.home {
+    margin: 4.7rem 0;
+}
+
+
+
+
+
+
+/*Botones del menu de navegacion*/
+.btnPlanes {
+    border-radius: 1rem;
+    padding: 0.5rem 4rem;
+    color: #fff;
+    background: linear-gradient(320deg, #3675C8 28%, #E91105 77%);
+    box-shadow: none;
+    align-content: center;
+    display: flex;
+    margin: 0 auto;
+}
+
+.barra--derecha {
+    display: inline-block;
+    box-shadow: none;
+    align-content: center;
+    margin: 0 auto;
+    float: right;
+    margin-top: 35px;
+    margin-right: 2rem;
+}
+
+.btnbarra {
+    border-radius: 1rem;
+    padding: 0.3rem 4rem;
+    color: #fff;
+    background-color: black;
+    box-shadow: none;
+    align-content: center;
+    display: flex;
+}
+
+.btnbarra2 {
+    border-radius: 1rem;
+    padding: 0.5rem 4rem;
+    color: #fff;
+    background: linear-gradient(320deg, #E91105 28%, #3675C8 77%);
+    box-shadow: none;
+    align-content: center;
+    display: flex;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+
+/*Barra de navegacion */
+nav {
+    width: 100%;
+}
+
+.barra {
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.463);
+    display: inline-block;
+    width: 250px;
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.comic_book,
+.logo {
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+.comic_book {
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+}
+
+.comic_book {
+    padding: 0;
+}
+
+.logo {
+    width: 55px;
+    margin: 0 10px;
+}
+
+.btnbarra:hover {
+    background: linear-gradient(320deg, #E91105 28%, #3675C8 77%);
+    cursor: pointer;
+}
+
+.btnPlanes:hover {
+    background: linear-gradient(320deg, black 28%, black 77%);
+    cursor: pointer;
+}
+
+.btnbarra2:hover {
+    background: linear-gradient(320deg, black 28%, black 77%);
+    cursor: pointer;
+}
+
+.seccion1 {
+    display: flex;
+    background: linear-gradient(90deg, #E91105 50%, #3675C8 50%);
+    color: white;
+    padding: 70px;
+    overflow: hidden;
+}
+
+.planesbtn {
+    margin: 0 auto;
+    display: flex;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    width: 14rem;
+    color: black;
+    background-color: #E91105;
+    font-size: 1.3rem;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.cuadrotxt {
+    background-color: black;
+    height: 50%;
+    width: 50%;
+    float: left;
+    padding: 2rem;
+    text-align: justify;
+    color: #fff;
+}
+
+.cuadrotxt {
+    margin: 1rem;
+}
+
+.espaciadoCuadroNegro {
+    margin-bottom: 1rem;
+}
+
+.derecha {
+    margin-top: 1rem;
+    margin-right: -3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+
+.derecha img {
+    height: 500px;
+    width: 70%;
+
+}
+
+
+
+
+
+.diapo-titulo {
+    padding: 2rem;
+    text-align: center;
+}
+
+.seccionesimg {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+.seccionesimg-elemento {
+    flex-basis: calc(33.33% - 20px);
+    margin-right: 20px;
+}
+
+
+
+.seccionesimg img {
+    display: flex;
+    margin: 0 auto;
+
+    color: var(--text-color-on-primary);
+    height: 450px;
+    border: solid var(--bg-color);
+}
+
+.ancho_pagina {
+    background-color: #fff;
+
+}
+
+
+
+.diapositiva__descripcion {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+
+.image-container {
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+}
+
+.button-container {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.carousel-button {
+    flex: 0 0 auto;
+}
+
+
+
+.finalpagina {
+    padding-bottom: 5rem;
+}
+
+
+.carousel-button {
+    color: #000;
+    background-color: #fff;
+    border: none;
+    font-size: 3rem;
+    color: #3675C8;
+}
+
+.ultimo_texto   {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+.seccionesimg-elemento h3{
+    margin-top: 2rem;
+}
+
+.informacion-seccionimg {
+    height: 100px;
+}
+
+.scroll-effect {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.scroll-effect.fade-in {
+    opacity: 1;
+}

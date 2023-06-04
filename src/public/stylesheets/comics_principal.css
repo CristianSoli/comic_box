@@ -1,0 +1,245 @@
+.img-responsive{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.card {
+	box-shadow: 0 2px 3px -1px #DCDCDC;
+}
+
+.card-wraped {
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.card {
+	box-sizing: border-box;
+	margin-bottom: 30px;
+	background-color: #fff;
+	background-clip: padding-box;
+}
+
+.card span.card-title {
+	color: #fff;
+	font-weight: 300;
+	font-size: 21px;
+}
+
+.card .card-image {
+	position: relative;
+	overflow: hidden;
+	background-color: #000;
+}
+
+.card .card-image img {
+	position: initial;
+	z-index: -1;
+	border-radius: 2px 2px 0 0;
+	background-clip: padding-box;
+	opacity: .9;
+	-webkit-transition: all .5s;
+	transition: all .5s;
+}
+
+.card .card-image .card-title {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: 0;
+	padding: 15px;
+	color: #fff;
+	font-size: 14px;
+}
+
+.card .card-content {
+	position: relative;
+	box-sizing: border-box;
+	padding: 15px;
+	border-radius: 0 0 2px 2px;
+	background-clip: padding-box;
+}
+
+.card .card-content p {
+	margin: 0 0 10px;
+}
+
+.card .card-content span.card-title {
+	line-height: 48px;
+}
+
+.card .card-price {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	padding: 2px 5px;
+	background-color: #fff;
+	box-shadow: 1px 2px 1px rgba(94, 93, 99, .08), 0 1px 2px rgba(61, 60, 66, .12);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 500;
+	font-size: 11px;
+}
+
+.card .card-action {
+	padding: 12px 15px;
+	border-top: 1px solid rgba(160, 160, 160, .2);
+}
+
+.card .card-action a {
+	margin-right: 5px;
+	color: #3b3b3b;
+	font-size: 12px;
+	-webkit-transition: color .3s ease;
+	transition: color .3s ease;
+}
+
+.card .card-action a i {
+	margin-right: 2px;
+}
+
+.card-action a.save i {
+	color: #da2a66;
+}
+
+.card .card-action a:hover {
+	color: #da2a66;
+	text-decoration: none;
+}
+
+.card .card-action a span {
+	color: #333f48;
+}
+
+.listingInfo {
+	position: relative;
+}
+
+.listingInfo {
+	clear: both;
+	padding: 0;
+}
+
+.listerName {
+	position: absolute;
+	top: -42px;
+	right: 0;
+	float: right;
+	border-radius: 50%;
+	text-align: center;
+}
+
+.listerName a.agent-wrapper {
+	overflow: hidden;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+.card{
+  width: 200px;
+  height: 400px;
+}
+
+.listerName img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: #fff;
+	box-shadow: 0 2px 3px -1px #DCDCDC;
+}
+
+.listerName figcaption {
+	position: absolute;
+	left: -66px;
+	padding-top: 4px;
+	width: 160px;
+	text-align: center;
+}
+
+.listingInfo .propertyStats {
+	margin-top: 3px;
+	margin-bottom: 0;
+	min-height: 25px;
+}
+
+.priceText {
+	margin-right: 130px;
+}
+
+.vcard {
+	min-height: 45px;
+}
+
+.vcard h2 {
+	margin: 0 0 15px;
+	font-weight: 500;
+	font-size: 16px;
+}
+
+.listingLocation {
+	font-size: 13px;
+}
+
+.listingLocation i {
+	padding-right: 8px;
+}
+
+.card.card-horizontal .card-image {
+	display: block;
+	height: 230px;
+}
+
+.card.card-horizontal .card-content {
+	width: 100%;
+	height: 230px;
+}
+
+.card.card-horizontal .card-content .card-action {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.card.card-horizontal .card-content .listingInfo {
+	display: table-cell;
+	height: 155px;
+	vertical-align: middle;
+}
+
+.card.card-horizontal .card-content .priceText {
+	margin-bottom: 0;
+	color: #0c0b0c;
+	font-weight: 600;
+	font-size: 16px;
+}
+
+.card.card-horizontal .card-content .vcard h2 {
+	margin: 8px 0 15px;
+	font-size: 20px;
+}
+
+.barra {
+	display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: center; /* Centra horizontalmente los elementos */
+    height: 80px; /* Ajusta la altura según sea necesario */
+    background-color: #000;
+	width: 400px;
+	margin-top: -100px;
+	margin-bottom: 50px;
+	margin-left: 40px;
+}
+
+.barra h2{
+	color: #fff;
+	
+}
+
+footer	{
+	margin-top: 100px;
+}
+
+footer {
+	padding-top: 1rem;
+}

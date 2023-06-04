@@ -1,0 +1,47 @@
+<%- include('partials/_header') %>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="card-body">
+                    <form action="/api/modificar/<%- data[0].id_comic %>" method="POST">
+
+                        <!-- Titulo del comic -->
+                        <div class="form-group">
+                            <input type="text" name="p_titulo" class="form-control" value="<%- data[0].titulo %>">
+                        </div>
+                    
+                        <!-- Sinopsis del comic -->
+                        <div class="form-group">
+                            <textarea placeholder="Sinopsis" rows="4" name="p_sinopsis" class="form-control" style="resize: none;"><%- data[0].sinopsis %></textarea>
+                        </div>
+                    
+                        <!-- Categoria del comic -->
+                        <div class="form-group">
+                            <select name="p_subcategoria" class="form-control">
+                                <option value="1" <% if (data[0].nombre_subcategoria == "Terror") { %> selected <% } %> >Terror</option>
+                                <option value="2" <% if (data[0].nombre_subcategoria == "Super Heroes") { %>selected<% } %> >Super Heroes</option>
+                                <option value="3" <% if (data[0].nombre_subcategoria == "Drama") { %>selected<% } %> >Drama</option>
+                                <option value="5" <% if (data[0].nombre_subcategoria == "Accion") { %>selected<% } %> >Accion</option>
+                                <option value="6" <% if (data[0].nombre_subcategoria == "Aventura") { %>selected<% } %> >Aventura</option>
+                                <option value="7" <% if (data[0].nombre_subcategoria == "Ciencia ficcion") { %>selected<% } %> >Ciencia ficcion</option>
+                                <option value="8" <% if (data[0].nombre_subcategoria == "Comedia") { %>selected<% } %> >Comedia</option>
+                                <option value="9" <% if (data[0].nombre_subcategoria == "Misterio") { %>selected<% } %> >Misterio</option>
+                                <option value="10" <% if (data[0].nombre_subcategoria == "Biografico") { %>selected<% } %> >Biografico</option>
+                            </select>
+                        </div> 
+                    
+                        <!-- Boton de enviar -->
+                        <div class="form-group">
+                            <input type="submit" value="Enviar" class="form-control btn btn-danger">
+                        </div>
+                    
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+<%- include('partials/_footer') %>

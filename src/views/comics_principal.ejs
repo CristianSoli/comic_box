@@ -1,0 +1,46 @@
+<%- include('partials/_header') %>
+    <%- include('partials/_navbar') %>
+    <%- include('partials/_carrusel') %>
+    
+    <div class="barra">
+        <h2>Todos los comics</h2>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+        <% if (data) { %>
+            <% for (var i = 0; i < data.length; i++) { %>
+                
+                    <div class="col-12 col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3">
+                        <div class="card">
+                            <div class="card-image">
+                                <a href="/preview/<%- data[i].id_comic %>">
+                                    <img class="img-responsive" src="<%- data[i].ruta_imagen %>" alt="<%- data[i].titulo %>">
+                                </a>
+                            </div>
+                            <div class="card-content">
+                                <div class="listingInfo">
+                                    <div class="propertyStats text-center">
+                                        <h5><%- data[i].titulo %></h5>
+                                        <p><%- data[i].sinopsis %></p>
+                                    </div>
+                                    <div class="d-grid gap-2">
+                                        <button routerLink="agregar" class="btn  btn-outline-secondary"
+                                            type="button">VER</button>
+                                    </div>
+            
+                                </div>
+            
+                            </div>
+                        </div>
+                    </div>
+            
+               
+            <% } %>
+        <% } %>
+    </div>
+    </div>
+
+
+<%- include('partials/_footer') %>

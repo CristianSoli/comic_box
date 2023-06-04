@@ -1,0 +1,101 @@
+<%- include('partials/_header_inicio') %>
+<%- include('partials/_navbar') %>
+
+        <div class="nav-centro"> </div>
+        <div class="barra">
+            <div class="comic_book">
+                <p>
+                    COMIC'S BOX
+                </p>
+            </div>
+            <img class="logo" src="images/Estrella_amarilla.png" alt="Estrellas">
+            </div>
+
+            <div class="home">
+                <h1 class="scroll-effect">
+                    MADURAR ES PARA FRUTAS
+                </h1>
+            </div>
+        
+        </div>
+
+        <section id="2">
+            <div class="seccion1">
+                <div class="cuadrotxt">
+                    <h3 class="espaciadoCuadroNegro" style="text-align: center; color: #fff;">
+                        Revive ese niño que llevas dentro
+                    </h3>
+                    <h4 class="espaciadoCuadroNegro" style="text-align: center; color: #fff;">
+                        Revisa nuestros planes
+                    </h4>
+                    <p class="espaciadoCuadroNegro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ex vitae excepturi autem exercitationem accusamus aspernatur reiciendis placeat veritatis officia quod, libero cupiditate fugiat nihil quisquam asperiores obcaecati reprehenderit perferendis!</p>
+                    <button class="planesbtn">
+                        Plan Gratis
+                    </button>
+                    <p class="espaciadoCuadroNegro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ab ipsam quisquam, qui, exercitationem odio numquam magnam, voluptas expedita officiis ipsum? Aspernatur natus corrupti fugit quos eveniet libero, dolorem modi.</p>
+                    <button class="planesbtn">
+                        Plan Premium
+                    </button>
+                </div>
+                <div class="derecha">
+                    <img src="images/imagen2.png" alt="comic2">
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="3">
+            <div class="ancho_pagina">
+                <div class="diapositiva__descripcion">
+                    <h2 class="diapo-titulo">Nuestro servicio</h2>
+                    <p class="ultimo_texto">
+                        Un servicio de comics gratuitos en la red te ofrece una increíble 
+                        oportunidad para sumergirte en el apasionante mundo de los cómics 
+                        sin gastar ni un centavo. Descubre historias emocionantes, conoce 
+                        nuevos personajes y disfruta de un entretenimiento visual cautivador,
+                        todo sin tener que abrir tu billetera. ¡Amplía tus horizontes y vive 
+                        la emoción de los cómics de forma accesible y conveniente!
+                    </p>
+                </div>
+                <div class="finalpagina">
+                    <div class="seccionesimg">
+                        <% if (data) { %>
+                            <% for (var i = 0; i < data.length; i++) { %>
+                                <div class="seccionesimg-elemento">
+                                    <div class="image-container">
+
+                                        <a href="/preview/<%- data[i].id_comic %>">
+                                            <img src="<%- data[i].ruta_imagen %>" alt="img<%- i + 1 %>" onclick="presion()">
+                                        </a>
+                                        <div class="button-container">
+                                            <div class="button-wrapper">
+                                                <button class="carousel-button prevButton" onclick="previousSlide()">
+                                                    <i class="bi bi-arrow-left-circle-fill"></i>
+                                                </button>
+                                            </div>
+                                            <div class="button-wrapper">
+                                                <button class="carousel-button nextButton" onclick="nextSlide()">
+                                                    <i class="bi bi-arrow-right-circle-fill"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="informacion-seccionimg">
+                                        <h3><%- data[i].titulo %></h3>
+                                        <p><%- data[i].sinopsis %></p>
+                                    </div>
+                                    
+                                </div>
+                            <% } %>
+                        <% } %>
+                    </div>
+                </div>
+                
+                
+
+
+            </div>
+        </section>
+
+<%- include('partials/_footer') %>

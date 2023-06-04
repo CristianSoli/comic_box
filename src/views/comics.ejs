@@ -1,0 +1,139 @@
+<%- include('partials/_header') %>
+<%- include('partials/_navbar') %>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-7">
+            <h2>Comics registrados</h2>
+            <!-- Tabla para mostrar los registros de la vista mostrar_comics -->
+            <div style="max-height: 500px; overflow-y: scroll;">
+                <table class="table table-dark">
+                    <thead>
+                        <!-- cabecera de los registros -->
+                        <tr>
+                            <th>Titulo</th>
+                            <th>Sinopsis</th>
+                            <th>Genero</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Recorrer la vista mostrar_comics -->
+                        <% if (data) { %>
+                            <% for (var i = 0; i < data.length; i++) { %>
+                                <tr>
+                                    <td style="text-align: justify;"> <%- data[i].titulo %> </td>
+                                    <td> <%- data[i].sinopsis %> </td>
+                                    <td> <%- data[i].nombre_subcategoria %> </td>
+                                    <td>
+                                        <a href="/api/modificar/<%- data[i].id_comic %>" class="btn" style="width: 86px; height: 25px;  display: flex; align-items: center; justify-content: center; background-color: #3675C8; color: white; margin-bottom: 5px;">Modificar</a>
+                                        
+                                        
+                                        
+                                        <a href="/api/eliminar/<%- data[i].id_comic %>" class="btn btn-danger" style="width: 86px; height: 25px;  display: flex; align-items: center; justify-content: center; background-color: #E91105;" >Eliminar</a>
+
+                                    </td>
+                                </tr>
+                            <% } %>
+                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <h2>Nuevo comic</h2>
+            <form action="/api/crear" method="post">
+
+                <!-- Titulo del comic -->
+                <div class="form-group">
+                    <input type="text" name="p_titulo" class="form-control" placeholder="Titulo" >
+                </div>
+
+                <!-- Sinopsis del comic -->
+                <div class="form-group">
+                    <textarea placeholder="Sinopsis" rows="4" name="p_sinopsis" class="form-control"  style="resize: none;"></textarea>
+                </div>
+
+                <!-- Autor del comic -->
+                <div class="form-group">
+                    <select name="p_id_autor" class="form-control">
+                        <option value="" disabled selected hidden>Selecciona un autor</option>
+                        <option value="1">Grant	Morrison</option>
+                        <option value="2">Stan Lee</option>
+                        <option value="3">Alan Moore</option>
+                        <option value="4">Frank	Miller</option>
+                        <option value="5">Jack	Kirby</option>
+                        <option value="6">Junji	ito</option>
+                        <option value="7">Brian Michael Bendis</option>
+                        <option value="8">Josep Michael Straczynski</option>
+                        <option value="9">Max Landis</option>
+                    </select>
+                </div>
+
+                <!-- Clasificacion del comic -->
+                <div class="form-group">
+                    <select name="p_id_clasificacion" class="form-control">
+                        <option value="" disabled selected hidden>Selecciona la clasificacion</option>
+                        <option value="1">Todo publico</option>
+                        <option value="2">Jovenes</option>
+                        <option value="3">Jovenes adultos</option>
+                        <option value="4">Audiencia madura</option>
+                    </select>
+                </div>
+
+                <!-- Editorial del comic -->
+                <div class="form-group">
+                    <select name="p_id_editorial" class="form-control">
+                        <option value="" disabled selected hidden>Selecciona la editorial</option>
+                        <option value="1">Panini</option>
+                        <option value="2">Marvel comics</option>
+                        <option value="3">DC comics</option>
+                        <option value="4">Kadokawa</option>
+                    </select>
+                </div>
+
+                <!-- Fecha de publicacion -->
+                <div class="form-group">
+                    <label for="fecha"> Fecha de publicacion: </label>
+                    <input type="datetime-local" name="p_año_publicacion" class="form-control" id="fecha">
+                </div>
+
+                <!-- URL del comic -->
+                <div class="form-group">
+                    <input type="text" name="p_referencia" placeholder="Direccion del comic" class="form-control">
+                </div>
+
+                <!-- Direccion de la imagen -->
+                <div class="form-group">
+                    <input type="text" name="p_ruta_imagen" placeholder="Ruta de la imagen" class="form-control">
+                </div>
+
+                <!-- Categoria del comic -->
+                <div class="form-group">
+                    <select name="p_subcategoria" class="form-control">
+                        <option value="" disabled selected hidden>Selecciona la categoria</option>
+                        <option value="1">Terror</option>
+                        <option value="2">Super Heroes</option>
+                        <option value="3">Drama</option>
+                        <option value="5">Accion</option>
+                        <option value="6">Aventura</option>
+                        <option value="7">Ciencia ficcion</option>
+                        <option value="8">Comedia</option>
+                        <option value="9">Misterio</option>
+                        <option value="10">Biografico</option>
+                    </select>
+                </div>
+
+                <!-- Boton de enviar -->
+                <div class="form-group">
+                    <input type="submit" value="Enviar" class="form-control btn btn-danger"  >
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+<%- include('partials/_footer') %>

@@ -1,0 +1,25 @@
+.ca {
+    color: white !important;
+}
+
+.form-control {
+    border-radius: 2rem;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
