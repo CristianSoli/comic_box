@@ -17,7 +17,8 @@
     "express-myconnection": "^1.0.4",
     "mysql": "^2.18.1",
     "mysql2": "^3.3.3",
-    "promise-mysql": "^5.2.0"
+    "promise-mysql": "^5.2.0",
+    "xmlbuilder": "^15.1.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.21.5",
